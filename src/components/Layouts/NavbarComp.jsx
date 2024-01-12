@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import navLogo from "../assets/Image/navLogo.png";
+import navLogo from "../../assets/Image/navLogo.png";
 import { Link } from "react-router-dom";
-import { navAccount, navCart, navHeart, navSearch } from "../assets";
+import { navAccount, navCart, navHeart, navSearch } from "../../assets";
 
 import { FaBars } from "react-icons/fa";
 import { FaXmark } from "react-icons/fa6";
