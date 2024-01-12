@@ -12,4 +12,4 @@ import navHeart from "./Icon/navHeart.png"
 import navSearch from "./Icon/navSearch.png"
 
 
-export {navLogo, heroImg, navAccount, navCart, navHeart, navSearch}
+export {navLogo, heroImg,  navAccount, navCart, navHeart, navSearch}

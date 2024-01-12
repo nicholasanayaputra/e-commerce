@@ -1,9 +1,11 @@
 import React from "react";
-import Hero from "./Hero";
+import Banner from "./Banner";
+import Category from "./Category";
 const Home = () => {
   return (
     <section className="w-full h-[89vh] bg-heroImage bg-center bg-cover">
-      <Hero />
+      <Banner />
+      <Category />
     </section>
   );
 };
