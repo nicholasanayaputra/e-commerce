@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Category = () => {
   const category = [
@@ -8,7 +9,7 @@ const Category = () => {
   ];
 
   return (
-    <div className="px-[35px] md:px-[53px]">
+    <div className="max-w-screen-2xl mx-auto container xl:px-28 px-4 py-28">
       <div>
         <h1 className="font-bold text-center text-2xl md:text-3xl text-gray-primary mt-[50px]">
           Browse The Range
@@ -19,7 +20,13 @@ const Category = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {category.map(({ id, img, name }) => (
             <div key={id} className="flex flex-col items-center">
-              <img src={img} alt="" />
+              <Link to="/">
+                <img
+                  src={img}
+                  alt=""
+                  className="w-full hover:scale-105 transition-all duration-200"
+                />
+              </Link>
               <p className="text-gray-primary text-center font-semibold text-lg my-4 md:text-xl">
                 {name}
               </p>

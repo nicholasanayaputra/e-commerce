@@ -10,6 +10,8 @@ export default {
         "yellow" : "#B88E2F",
         "gray-primary" : "#333333",
         "gray-secondary" : "#666666",
+        "gray-third" : "#3A3A3A",
+        "gray-fourth" : "#898989"
       },
       fontFamily:{
         'primary' : ['Montserrat', 'sans-serif']

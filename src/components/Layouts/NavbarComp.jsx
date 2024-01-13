@@ -20,7 +20,7 @@ const NavbarComp = () => {
   ];
 
   return (
-    <header className=" px-[35px] py-[20px] md:px-[53px] ">
+    <header className="max-w-screen-2xl mx-auto container xl:px-28 px-4 py-[28px]">
       <nav className="container flex justify-between items-center ">
         <Link
           to={"/"}
