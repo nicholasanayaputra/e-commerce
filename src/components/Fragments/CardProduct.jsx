@@ -10,7 +10,9 @@ const CardProduct = (props) => {
 const Header = (props) => {
   const { image } = props;
   return (
-    <img src={image} alt="" className="w-[285px] object-cover h-[301px]" />
+    <>
+      <img src={image} alt="" className="w-[285px] object-cover h-[301px]" />
+    </>
   );
 };
 

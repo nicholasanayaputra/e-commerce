@@ -4,7 +4,6 @@ import heroImg from "./Image/heroImg.png"
 
 
 
-
 // Icon
 import navAccount from "./Icon/navAccount.png"
 import navCart from "./Icon/navShoppingCart.png"
