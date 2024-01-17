@@ -9,10 +9,9 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 const carouselImage = [
-  { image: "src/assets/Image/carousel-1.png" },
-  { image: "src/assets/Image/carousel-1.png" },
-  { image: "src/assets/Image/carousel-1.png" },
-  { image: "src/assets/Image/carousel-1.png" },
+  { id: 1, image: "src/assets/Image/carousel-1.png" },
+  { id: 2, image: "src/assets/Image/carousel-2.jpg" },
+  { id: 3, image: "src/assets/Image/carousel-3.jpg" },
 ];
 const CardCarousel = () => {
   return (
@@ -48,8 +47,12 @@ const CardCarousel = () => {
         className="mySwiper"
       >
         {carouselImage.map((item) => (
-          <SwiperSlide key={item}>
-            <img src={item.image} alt="" className="w-[300px] h-[400px]" />
+          <SwiperSlide key={item.id}>
+            <img
+              src={item.image}
+              alt=""
+              className="w-[300px] h-[400px] object-cover"
+            />
           </SwiperSlide>
         ))}
       </Swiper>

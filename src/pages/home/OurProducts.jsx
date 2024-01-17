@@ -21,7 +21,7 @@ const OurProducts = () => {
           </CardProduct>
         ))}
       </div>
-      <Link className="flex justify-center items-center mt-8">
+      <Link to={"/shop"} className="flex justify-center items-center mt-8">
         <button className=" border border-yellow text-yellow md:px-24 px-5 py-2 font-bold text-base hover:bg-yellow hover:text-white">
           Show More
         </button>

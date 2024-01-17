@@ -5,7 +5,7 @@ const Carousel = () => {
     <div className="max-w-screen-2xl mx-auto container xl:px-28 px-4 mt-14">
       <div className="grid grid-cols-12 gap-4 md:gap-0">
         <div className="col-span-5 flex flex-col items-start justify-center">
-          <h1 className="font-bold lg:text-4xl text-2xl md:text-3xl text-gray-third lg:leading-tight">
+          <h1 className="font-bold lg:text-4xl text-xl sm:text-2xl md:text-3xl text-gray-third lg:leading-tight">
             50+ Beautiful rooms inspiration
           </h1>
           <p className="md:text-sm text-xs  font-normal text-[#616161] my-2">
