@@ -18,6 +18,7 @@ export default {
       },
       backgroundImage: {
         'heroImage' : "url('./assets/Image/heroImg.png')",
+        'shopImage' : "url('./assets/Image/shopBanner.png')",
       }
     },
   },

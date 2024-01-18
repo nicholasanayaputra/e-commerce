@@ -1,7 +1,7 @@
 // Image
 import navLogo from "./Image/navLogo.png"
 import heroImg from "./Image/heroImg.png"
-
+import ShopBanner from "./Image/ShopBanner.png"
 
 
 // Icon
@@ -11,4 +11,4 @@ import navHeart from "./Icon/navHeart.png"
 import navSearch from "./Icon/navSearch.png"
 
 
-export {navLogo, heroImg,  navAccount, navCart, navHeart, navSearch}
+export {navLogo, heroImg, ShopBanner, navAccount, navCart, navHeart, navSearch}

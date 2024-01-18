@@ -2,12 +2,12 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto container xl:px-28 px-4 border border-t-[1px] bg-gray-300">
+    <div className="max-w-screen-2xl mx-auto container xl:px-28 px-4 border border-t-[1px]">
       <div className="mt-14">
         <div className="grid grid-cols-12">
-          <div className="md:col-span-4 col-span-12 flex flex-col-reverse md:flex-col items-center text-center">
+          <div className="md:col-span-4 col-span-12 flex flex-col-reverse md:flex-col items-center ">
             <h3 className="font-bold text-xl md:mb-11 mb-20">Funiro.</h3>
-            <p className="w-4/5 text-[#9F9F9F] text-sm mb-5 lg:mb-0">
+            <p className="w-4/5 text-[#9F9F9F] text-sm mb-5 lg:mb-0 text-center md:text-start">
               400 University Drive Suite 200 Coral Gables, FL 33134 USA
             </p>
           </div>

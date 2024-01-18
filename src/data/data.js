@@ -12,7 +12,7 @@ export const data = [
         name: "Leviosa",
         desc: "Stylish cafe chair",
         price: "2500000",
-        category: "chair",
+        category: "table",
         image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
@@ -28,7 +28,7 @@ export const data = [
         name: "Respira",
         desc: "Outdoor bar table and stool",
         price: "500000",
-        category: "sitting-room",
+        category: "table",
         image: "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?q=80&w=1409&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
@@ -52,7 +52,7 @@ export const data = [
         name: "Cute chair",
         desc: "Stylish cafe chair",
         price: "200000",
-        category: "chair",
+        category: "table",
         image: "https://plus.unsplash.com/premium_photo-1668073438984-6f9f2e3e9aa0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
@@ -76,7 +76,7 @@ export const data = [
         name: "Leviosa",
         desc: "Stylish cafe chair",
         price: "2500000",
-        category: "chair",
+        category: "table",
         image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
@@ -92,7 +92,7 @@ export const data = [
         name: "Respira",
         desc: "Outdoor bar table and stool",
         price: "500000",
-        category: "sitting-room",
+        category: "table",
         image: "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?q=80&w=1409&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
@@ -116,7 +116,7 @@ export const data = [
         name: "Cute chair",
         desc: "Stylish cafe chair",
         price: "200000",
-        category: "chair",
+        category: "table",
         image: "https://plus.unsplash.com/premium_photo-1668073438984-6f9f2e3e9aa0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
@@ -140,7 +140,7 @@ export const data = [
         name: "Leviosa",
         desc: "Stylish cafe chair",
         price: "2500000",
-        category: "chair",
+        category: "table",
         image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
 ]
