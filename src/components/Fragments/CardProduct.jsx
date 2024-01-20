@@ -34,7 +34,10 @@ const Footer = (props) => {
   const { price, discount } = props;
   return (
     <div className="px-4 pb-[20px] flex items-center gap-4">
-      <h3 className="font-semibold text-base text-gray-third">{price}</h3>
+      <h3 className="font-semibold text-base text-gray-third">
+        Rp{" "}
+        {price.toLocaleString("id-ID", { styles: "currency", currency: "IDR" })}
+      </h3>
       <p className="text-[#B0B0B0] font-normal text-base hidden md:block">
         {discount}
       </p>
