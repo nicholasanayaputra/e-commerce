@@ -14,13 +14,6 @@ const CardShop = ({ products }) => {
           </CardProduct>
         ))}
       </div>
-
-      {/* Pagination */}
-      <div className="flex gap-4 justify-center py-4 font-medium">
-        <button className="px-2 py-1 bg-yellow rounded-lg">1</button>
-        <button className="px-2 py-1 bg-yellow rounded-lg">2</button>
-        <button className="px-2 py-1 bg-yellow rounded-lg">Next</button>
-      </div>
     </div>
   );
 };

@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import CardShop from "../../components/Fragments/CardShop";
 import { FaFilter } from "react-icons/fa";
 import { data } from "../../data/data";
+import Pagination from "./Pagination";
 
 const FilteredShop = () => {
   const [products, setProducts] = useState(data);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(8);
 
   const filteredShop = (category) => {
     setProducts(
@@ -32,6 +35,10 @@ const FilteredShop = () => {
         break;
     }
   };
+
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentPosts = products.slice(firstPostIndex, lastPostIndex);
   return (
     <>
       <div className="max-w-screen-2xl mx-auto container xl:px-28 px-4 bg-[#f9f1e7] py-8">
@@ -84,7 +91,12 @@ const FilteredShop = () => {
           </div>
         </div>
       </div>
-      <CardShop products={products} />
+      <CardShop products={currentPosts} />
+      <Pagination
+        totalPosts={products.length}
+        postsPerPage={postsPerPage}
+        setCurrentPage={setCurrentPage}
+      />
     </>
   );
 };

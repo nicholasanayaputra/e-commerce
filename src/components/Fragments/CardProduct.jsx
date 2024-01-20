@@ -14,7 +14,7 @@ const Header = (props) => {
       <img
         src={image}
         alt=""
-        className="w-[285px] object-cover h-[301px] hover:scale-105 transition-all duration-200"
+        className="w-[285px] object-cover h-[301px] hover:scale-105 transition-all duration-200 "
       />
     </>
   );
