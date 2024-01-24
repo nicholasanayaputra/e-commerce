@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const CardProduct = (props) => {
   const { children } = props;
   return (
@@ -8,14 +10,16 @@ const CardProduct = (props) => {
 };
 
 const Header = (props) => {
-  const { image } = props;
+  const { image, product } = props;
   return (
     <>
-      <img
-        src={image}
-        alt=""
-        className="w-[285px] object-cover h-[301px] hover:scale-105 transition-all duration-200 "
-      />
+      <Link to={`/shop/${product}`}>
+        <img
+          src={image}
+          alt=""
+          className="w-[285px] object-cover h-[301px] hover:scale-105 transition-all duration-200 "
+        />
+      </Link>
     </>
   );
 };

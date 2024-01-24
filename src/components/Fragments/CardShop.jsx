@@ -6,7 +6,7 @@ const CardShop = ({ products }) => {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {products.map((product) => (
           <CardProduct key={product.id}>
-            <CardProduct.Header image={product.image} />
+            <CardProduct.Header image={product.image} product={product.id} />
             <CardProduct.Body name={product.name}>
               {product.desc}
             </CardProduct.Body>

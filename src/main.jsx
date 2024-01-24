@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import LoginPage from "./pages/login.jsx";
 import RegisterPage from "./pages/register.jsx";
 import Shop from "./pages/shop/Shop.jsx";
+import SingleProduct from "./pages/SingleProduct.jsx";
 
 const router = createBrowserRouter([
   {
@@ -22,12 +23,17 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "/products",
+        path: "/",
         element: <Home />,
       },
       {
         path: "/shop",
         element: <Shop />,
+      },
+
+      {
+        path: "/shop/:id",
+        element: <SingleProduct />,
       },
     ],
   },

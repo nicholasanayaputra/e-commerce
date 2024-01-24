@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import navLogo from "../../assets/Image/navLogo.png";
+import navCart from "../../assets/Icon/navShoppingCart.png";
 import { Link } from "react-router-dom";
-import { navAccount, navCart, navHeart, navSearch } from "../../assets";
-
-import { FaBars } from "react-icons/fa";
+import { RiContactsLine } from "react-icons/ri";
+import { IoHomeOutline } from "react-icons/io5";
+import { FaBars, FaRegUser } from "react-icons/fa";
+import { FiShoppingCart } from "react-icons/fi";
 import { FaXmark } from "react-icons/fa6";
 const NavbarComp = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,10 +15,10 @@ const NavbarComp = () => {
   };
 
   const navLinks = [
-    { path: "/", link: "Home" },
-    { path: "/shop", link: "Shop" },
-    { path: "/about", link: "About" },
-    { path: "/contact", link: "Contact" },
+    { path: "/", link: "Home", icon: <IoHomeOutline /> },
+    { path: "/shop", link: "Shop", icon: <FiShoppingCart /> },
+    { path: "/about", link: "About", icon: <FaRegUser /> },
+    { path: "/contact", link: "Contact", icon: <RiContactsLine /> },
   ];
 
   return (
@@ -46,18 +48,17 @@ const NavbarComp = () => {
 
         {/* Navbar Icon */}
         <div className="lg:flex items-center gap-9 hidden ">
-          <a href="#">
-            <img src={navAccount} alt="navbar account" className="h-5 w-5" />
-          </a>
-          <a href="#">
-            <img src={navSearch} alt="navbar search" className="h-5 w-5" />
-          </a>
-          <a href="#">
-            <img src={navHeart} alt="navbar heart" className="h-5 w-5" />
-          </a>
-          <a href="#">
-            <img src={navCart} alt="navbar cart" className="h-5 w-5" />
-          </a>
+          <Link to="/login">
+            <button className="bg-yellow text-white px-6 py-2 rounded-full">
+              Login
+            </button>
+          </Link>
+          <Link to="/cart">
+            <img src={navCart} alt="" className="w-5 h-5" />
+          </Link>
+          <div className="w-[16px] h-[16px] flex justify-center items-center mt-[-25px]  ml-[-45px] rounded-[11px] text-[14px] bg-red-600 text-white">
+            0
+          </div>
         </div>
 
         {/* Hamburger Menu */}
@@ -70,22 +71,28 @@ const NavbarComp = () => {
             )}
           </button>
         </div>
-
-        {/* Menu Item Mobile */}
       </nav>
 
       {/* Mobile Items Menu */}
-      <div>
+      <div className="fixed bottom-0 right-0 left-0 bg-red-300">
         <ul
-          className={`gap-4 flex flex-col items-center text-lg space-y-4 px-4 py-6 mt-20 bg-[#fff3e3] ${
+          className={`flex items-center justify-between ${
             isOpen
-              ? "fixed top-0 left-0 w-[300px] rounded-t-md h-screen transition-all ease-out duration-300"
-              : "fixed top-0 left-[-100%] w-[300px] rounded-b-md h-screen bg-[#fff3e3] z-10 duration-300"
+              ? "flex transition-all ease-in duration-300"
+              : "hidden transition-all ease-in duration-300"
           }`}
         >
-          {navLinks.map(({ path, link }) => (
-            <li key={path} className="text-black text-base font-semibold">
-              <Link to={path}>{link}</Link>
+          {navLinks.map((val, index) => (
+            <li key={index} className="text-black text-base font-semibold">
+              <Link
+                to={val.path}
+                className="flex items-center gap-1 flex-col justify-center"
+              >
+                <div className="text-lg">{val.icon}</div>
+                <div className="text-base font-semibold text-gray-primary">
+                  {val.link}
+                </div>
+              </Link>
             </li>
           ))}
         </ul>
