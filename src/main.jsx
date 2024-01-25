@@ -8,6 +8,8 @@ import LoginPage from "./pages/login.jsx";
 import RegisterPage from "./pages/register.jsx";
 import Shop from "./pages/shop/Shop.jsx";
 import SingleProduct from "./pages/SingleProduct.jsx";
+import Cart from "./pages/Cart.jsx";
+import ShopContextProvider from "./components/Context/ShopContext.jsx";
 
 const router = createBrowserRouter([
   {
@@ -30,10 +32,13 @@ const router = createBrowserRouter([
         path: "/shop",
         element: <Shop />,
       },
-
       {
         path: "/shop/:id",
         element: <SingleProduct />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
   },
@@ -41,6 +46,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ShopContextProvider>
+      <RouterProvider router={router} />
+    </ShopContextProvider>
   </React.StrictMode>
 );

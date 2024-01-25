@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import CardProduct from "../../components/Fragments/CardProduct";
-import { data } from "../../data/data";
 import { Link } from "react-router-dom";
+import allProducts from "../../data/data";
 const OurProducts = () => {
-  const [products, setProducts] = useState(data);
+  const [products, setProducts] = useState(allProducts);
 
   return (
     <div className="max-w-screen-2xl mx-auto container xl:px-28 px-4">

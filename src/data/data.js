@@ -1,11 +1,12 @@
-export const data = [
+const allProducts = [
     {
         id: 1,
         name: "Syltherine",
         desc: "Stylish cafe chair",
         price: 2500000,
+        disc: "Rp 3.500.000",
         category: "table",
-        image: "https://images.unsplash.com/photo-1601929600847-b1b4572b7ae7?q=80&w=1580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image: "https://images.unsplash.com/photo-1537182534312-f945134cce34?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         id: 2,
@@ -20,6 +21,7 @@ export const data = [
         name: "Lolito",
         desc: "Luxury big sofa",
         price: 7000000,
+        disc: "Rp 14.000.000",
         category: "sofa",
         image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
@@ -36,8 +38,9 @@ export const data = [
         name: "Grifo",
         desc: "Night lamp",
         price: 1500000,
+        disc: "Rp 3.500.000",
         category: "lamp",
-        image: "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=1467&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image: "https://images.unsplash.com/photo-1570974802254-4b0ad1a755f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         id: 6,
@@ -45,15 +48,16 @@ export const data = [
         desc: "Small kitchen",
         price: 150000,
         category: "kitchen",
-        image: "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image: "https://images.unsplash.com/photo-1564540586988-aa4e53c3d799?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         id: 7,
         name: "Cute chair",
         desc: "Stylish cafe chair",
         price: 200000,
+        disc: "Rp 14.000.000",
         category: "table",
-        image: "https://images.unsplash.com/photo-1429087969512-1e85aab2683d?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image: "https://images.unsplash.com/photo-1609510368600-883b7f16d121?q=80&w=1448&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         id: 8,
@@ -68,8 +72,9 @@ export const data = [
         name: "Syltherine",
         desc: "Stylish cafe chair",
         price: 2500000,
+        disc: "Rp 3.500.000",
         category: "table",
-        image: "https://plus.unsplash.com/premium_photo-1675744019321-f90d6d719da7?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image: "https://images.unsplash.com/photo-1605239435870-67df4c54a0b3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         id: 10,
@@ -77,7 +82,7 @@ export const data = [
         desc: "Stylish cafe chair",
         price: 2500000,
         category: "table",
-        image: "https://images.unsplash.com/photo-1565791380713-1756b9a05343?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image: "https://images.unsplash.com/photo-1611306133964-f06d181327fd?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
         id: 11,
@@ -100,6 +105,7 @@ export const data = [
         name: "Grifo",
         desc: "Night lamp",
         price: 1500000,
+        disc: "Rp 3.500.000",
         category: "lamp",
         image: "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
@@ -132,6 +138,7 @@ export const data = [
         name: "Syltherine",
         desc: "Stylish cafe chair",
         price: 2500000,
+        disc: "Rp 3.500.000",
         category: "table",
         image: "https://plus.unsplash.com/premium_photo-1674815327724-2330a6391483?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
@@ -141,6 +148,8 @@ export const data = [
         desc: "Stylish cafe chair",
         price: 2500000,
         category: "table",
-        image: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image: "https://images.unsplash.com/photo-1604145195376-e2c8195adf29?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
 ]
+
+export default allProducts

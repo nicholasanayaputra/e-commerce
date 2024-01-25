@@ -42,7 +42,7 @@ const Footer = (props) => {
         Rp{" "}
         {price.toLocaleString("id-ID", { styles: "currency", currency: "IDR" })}
       </h3>
-      <p className="text-[#B0B0B0] font-normal text-base hidden md:block">
+      <p className="text-[#B0B0B0] font-normal text-sm hidden md:block line-through">
         {discount}
       </p>
     </div>

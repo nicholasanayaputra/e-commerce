@@ -2,17 +2,17 @@
 import React, { useState } from "react";
 import CardShop from "../../components/Fragments/CardShop";
 import { FaFilter } from "react-icons/fa";
-import { data } from "../../data/data";
 import Pagination from "./Pagination";
+import allProducts from "../../data/data";
 
 const FilteredShop = () => {
-  const [products, setProducts] = useState(data);
+  const [products, setProducts] = useState(allProducts);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(8);
 
   const filteredShop = (category) => {
     setProducts(
-      data.filter((item) => {
+      allProducts.filter((item) => {
         return item.category === category;
       })
     );
@@ -47,7 +47,7 @@ const FilteredShop = () => {
         <div className="flex flex-col md:flex-row gap-4 justify-between">
           <div className="flex items-center gap-4 justify-center font-semibold">
             <button
-              onClick={() => setProducts(data)}
+              onClick={() => setProducts(allProducts)}
               className="hover:text-yellow text-gray-primary"
             >
               All
