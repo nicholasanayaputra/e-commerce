@@ -16,6 +16,7 @@ const Header = (props) => {
       <Link to={`/shop/${product}`}>
         <img
           src={image}
+          onClick={() => window.scrollTo(0, 0)}
           alt=""
           className="w-[285px] object-cover h-[301px] hover:scale-105 transition-all duration-200 "
         />

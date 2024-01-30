@@ -2,12 +2,15 @@ import { Link, useParams } from "react-router-dom";
 import allProducts from "../data/data";
 import { IoIosArrowForward } from "react-icons/io";
 import Star from "../assets/Image/star.png";
-import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+// import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Purple, Black, Yellow } from "../assets";
 import Description from "../components/Fragments/Description";
 import Footer from "./home/Footer";
+import { useContext } from "react";
+import { ShopContext } from "../components/Context/ShopContext";
 
 const SingleProduct = () => {
+  const { addToCart } = useContext(ShopContext);
   const { id } = useParams();
   return (
     <div className="w-full">
@@ -74,8 +77,9 @@ const SingleProduct = () => {
               <button
                 className="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900"
                 type="button"
+                onClick={() => addToCart(allProducts[id - 1].id)}
               >
-                Add to bag
+                Add to cart
               </button>
               <button
                 className="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-200"
@@ -98,7 +102,7 @@ const SingleProduct = () => {
             </div>
           </div>
           <div className="md:py-8 md:border-t-2">
-            <table className="table-auto border-separate text-[#9F9F9F] text-sm font-medium border-spacing-2">
+            {/* <table className="table-auto border-separate text-[#9F9F9F] text-sm font-medium border-spacing-2">
               <tr>
                 <td>SKU</td>
                 <td>:</td>
@@ -126,7 +130,7 @@ const SingleProduct = () => {
                   <FaTwitter className="w-4 h-4 text-black" />
                 </td>
               </tr>
-            </table>
+            </table> */}
           </div>
         </div>
       </div>

@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import navLogo from "../../assets/Image/navLogo.png";
 import navCart from "../../assets/Icon/navShoppingCart.png";
 import { Link } from "react-router-dom";
-import { RiContactsLine } from "react-icons/ri";
+import { RiContactsLine, RiCustomerService2Line } from "react-icons/ri";
 import { IoHomeOutline } from "react-icons/io5";
-import { FaBars, FaRegUser } from "react-icons/fa";
+import { FaBars, FaRegListAlt, FaRegUser } from "react-icons/fa";
+import { BiSolidUserPlus } from "react-icons/bi";
+import { MdOutlineQrCodeScanner } from "react-icons/md";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaXmark } from "react-icons/fa6";
+import { ShopContext } from "../Context/ShopContext";
 const NavbarComp = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { getTotalCartItems } = useContext(ShopContext);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -19,6 +22,19 @@ const NavbarComp = () => {
     { path: "/shop", link: "Shop", icon: <FiShoppingCart /> },
     { path: "/about", link: "About", icon: <FaRegUser /> },
     { path: "/contact", link: "Contact", icon: <RiContactsLine /> },
+  ];
+  const navLinksMobile = [
+    { path: "/", link: "Back To Home", icon: <IoHomeOutline /> },
+    { path: "/cart", link: "Transaction list", icon: <FaRegListAlt /> },
+    { path: "/shop", link: "Go To Shop", icon: <FiShoppingCart /> },
+    { path: "/about", link: "Go To About", icon: <FaRegUser /> },
+    { path: "/contact", link: "Go To Contact", icon: <RiContactsLine /> },
+  ];
+
+  const services = [
+    { icon: <BiSolidUserPlus />, name: "Order was complained" },
+    { icon: <RiCustomerService2Line />, name: "Furniro care assistance" },
+    { icon: <MdOutlineQrCodeScanner />, name: "Scan Code QR" },
   ];
 
   return (
@@ -57,12 +73,18 @@ const NavbarComp = () => {
             <img src={navCart} alt="" className="w-5 h-5" />
           </Link>
           <div className="w-[16px] h-[16px] flex justify-center items-center mt-[-25px]  ml-[-45px] rounded-[11px] text-[14px] bg-red-600 text-white">
-            0
+            {getTotalCartItems()}
           </div>
         </div>
 
         {/* Hamburger Menu */}
-        <div className="lg:hidden">
+        <div className="lg:hidden flex gap-6 items-center">
+          <Link to="/cart">
+            <img src={navCart} alt="" className="w-5 h-5" />
+          </Link>
+          <div className="w-[16px] h-[16px] flex justify-center items-center mt-[-25px]  ml-[-33px] rounded-[11px] text-[14px] bg-red-600 text-white">
+            {getTotalCartItems()}
+          </div>
           <button onClick={toggleMenu}>
             {isOpen ? (
               <FaXmark className="w-5 h-5" />
@@ -74,28 +96,43 @@ const NavbarComp = () => {
       </nav>
 
       {/* Mobile Items Menu */}
-      <div className="fixed bottom-0 right-0 left-0 bg-red-300">
-        <ul
-          className={`flex items-center justify-between ${
-            isOpen
-              ? "flex transition-all ease-in duration-300"
-              : "hidden transition-all ease-in duration-300"
-          }`}
-        >
-          {navLinks.map((val, index) => (
-            <li key={index} className="text-black text-base font-semibold">
-              <Link
-                to={val.path}
-                className="flex items-center gap-1 flex-col justify-center"
-              >
-                <div className="text-lg">{val.icon}</div>
-                <div className="text-base font-semibold text-gray-primary">
+      <div
+        className={`right-0 top-0 left-0 py-2 h-screen bg-white ${
+          isOpen ? "block" : "hidden"
+        }`}
+      >
+        <div className="flex justify-between items-center gap-4 text-sm py-4">
+          <button className="w-full text-white bg-yellow rounded-md py-2 font-semibold text-xs">
+            Login
+          </button>
+          <button className="w-full border text-yellow border-yellow rounded-md py-2 font-semibold text-xs">
+            Register
+          </button>
+        </div>
+        <ul className="flex flex-col space-y-4 justify-between py-2 gap-4">
+          {navLinksMobile.map((val, index) => (
+            <li key={index} className="">
+              <Link to={val.path} className="flex items-center gap-2">
+                <div>{val.icon}</div>
+                <div className="text-sm font-medium text-gray-primary">
                   {val.link}
                 </div>
               </Link>
             </li>
           ))}
         </ul>
+        <div className="pt-4 border-t-8">
+          <ul className="flex flex-col space-y-6 justify-between py-2">
+            {services.map((val, index) => (
+              <li key={index} className="flex items-center gap-2">
+                <div>{val.icon}</div>
+                <div className="text-sm font-medium text-gray-primary">
+                  {val.name}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </header>
   );
